@@ -9,7 +9,7 @@ class Api::V1::SessionsController < ApplicationController
       sign_in user, store: false
       user.generate_authentication_token!
       user.save
-      render json: {status: 1,responseMessage: "User find Successfully"}
+      render json: {status: 1,responseMessage: "User find Success"}
     else
       render json: { errors: "Invalid email or password" }, status: 422
     end
